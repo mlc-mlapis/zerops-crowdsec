@@ -1,4 +1,4 @@
-domino:
+crowdsec:
   build:
     base: 
       - nodejs@16
