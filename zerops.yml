@@ -17,5 +17,6 @@ crowdsec:
       - |
         curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
         apt install gettext-base
+        apt install dialog apt-utils -y
         apt install crowdsec
     start: yarn start
