@@ -1,0 +1,20 @@
+domino:
+  build:
+    base: 
+      - nodejs@16
+    build:
+      - npm -v
+      - node -v
+      - npm i
+    cache:
+      - node_modules
+    deploy:
+      - package.json
+      - node_modules
+      - ./app/index.js
+  run:
+    prepare:
+      - |
+        curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
+        apt install crowdsec
+    start: yarn start
