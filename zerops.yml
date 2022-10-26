@@ -15,7 +15,7 @@ crowdsec:
   run:
     prepare:
       - |
-        sudo curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
-        sudo apt update
-        sudo apt install crowdsec
+        curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
+        apt update
+        # apt install crowdsec
     start: yarn start
